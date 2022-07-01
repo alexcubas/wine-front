@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 1.2em;
+  background-color: #FFFFFF;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link_items {
+  display: flex;
+  list-style: none;
+}
+
+.link_items li {
+  margin-right: 1.3em;
+  color: #555555;
+}
+
+.link_items a {
+  margin-right: 1.3em;
+  color: #555555;
+  list-style: none;
+}
+
+/* .link_items a */
