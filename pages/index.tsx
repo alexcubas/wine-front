@@ -11,14 +11,18 @@ import ApplicationContext from '../context/applicationContext'
 export default function Home() {
   const { wines, fetchWines } = useWines(9)
   const { actualPage, setActualPage } = usePagination()
-  const {filter} = useContext(ApplicationContext);
-
+  const {filter, setCounterCart} = useContext(ApplicationContext);
+  
   useEffect(() => {
+    const cartCounter = JSON.parse(localStorage.getItem('prods'))
+    setCounterCart(cartCounter ? cartCounter.length : 0)
+
     fetchWines(actualPage)
   }, [actualPage, filter])
   return (
     <>
       <PriceLimit/>
+      <p>{wines && wines.totalItems} produtos encontrados </p>
       <div style={{
         display: "grid",
         gridTemplateColumns: 'repeat(3, 1fr)'

@@ -1,9 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useContext, useEffect } from "react";
+import ApplicationContext from "../context/applicationContext";
 
 import styles from '../styles/Navbar.module.css'
 
 export default function Navbar() {
+  const {counterCart} = useContext(ApplicationContext);
+
+  useEffect(() => {
+    counterCart
+  }, [counterCart])
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -34,6 +41,7 @@ export default function Navbar() {
       </div>
       <div className={styles.logo}>
         <Image src="/images/winebox.png" width="50" height="50" alt="logo carrinho de compras" />
+        <p>{counterCart}</p>
       </div>
     </nav>
   )

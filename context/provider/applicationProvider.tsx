@@ -4,10 +4,19 @@ import ApplicationContext from '../applicationContext';
 
 function ApplicationProvider({ children }) {
   const [filter, setFilter] = useState('0-500');
+  const [wineById, setWineById] = useState({});
+  const [winesG, setWinesG] = useState([]);
+  const [counterCart, setCounterCart] = useState(0);
 
   const values = {
     filter,
     setFilter,
+    wineById,
+    setWineById,
+    winesG,
+    setWinesG,
+    counterCart,
+    setCounterCart
   };
 
   return (

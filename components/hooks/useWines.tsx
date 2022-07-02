@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useContext, useState } from "react"
 import ApplicationContext from "../../context/applicationContext";
 
@@ -25,15 +24,15 @@ interface IProduct {
 
 export default function useWines (pageLimit: number) {
   const [wines, setWines] = useState<IProduct>()
-  const {filter} = useContext(ApplicationContext);
-
-  function fetchWines (page: number) {
-    fetch(
+  const {filter, setWinesG} = useContext(ApplicationContext);
+  
+  async function fetchWines (page: number) {
+    const res = await fetch(
       `https://wine-back-test.herokuapp.com/products?page=${page}&limit=${pageLimit}&filter=${filter}`
     )
-      .then(res => res.json())
-      .then(data => setWines(data))
-      .catch(window.alert)
+    const respJson = await res.json()
+    setWines(respJson)
+    setWinesG(respJson)
   }
 
   return {
