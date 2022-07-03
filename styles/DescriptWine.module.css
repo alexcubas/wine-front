@@ -1,0 +1,58 @@
+.descFather {
+  display: flex;
+}
+
+.descImage {
+  margin-top: 5vw;
+  margin-left: 10vw;
+  margin-right: 5vw;
+}
+
+.descSun {
+  margin-top: 5vw;
+  margin-right: 15vw;
+}
+
+.descAbout {
+  display: flex;
+  align-items: center;
+}
+
+.descAboutDetails {
+  margin-top: 15px;
+  margin-left: 20px;
+  color: #555555;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
+.noPartnerText {
+  font-weight: bold;
+  color: #888888;
+}
+
+.whereText {
+  margin-left: 5px;
+  color: #888888;
+}
+
+.pinkText {
+  color: #C81A78;
+}
+
+.descPrice {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.descSunPrice {
+  display: flex;
+  align-items: center;
+  color: #C81A78;
+}
+
+.descPriceText {
+  font-weight: bold;
+}

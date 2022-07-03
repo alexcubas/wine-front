@@ -1,0 +1,11 @@
+.cardGlobal {
+  display: flex;
+  justify-content: center;
+}
+
+.cardFather {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15vw;
+  margin-right: 8vw;
+}

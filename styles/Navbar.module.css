@@ -4,6 +4,7 @@
   align-items: center;
   padding: 1em 1.2em;
   background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .logo {

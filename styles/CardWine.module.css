@@ -1,0 +1,80 @@
+.cardDisplay {
+  display: flex;
+}
+
+.cardFather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 10px;
+}
+
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardFather a {
+  text-decoration: none;
+  color: #222;
+}
+
+.cardSun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textrisc {
+  text-decoration: line-through;
+  margin-right: 10px;
+  color: #888888;
+}
+
+.textColor {
+  background-color: rgb(248, 123, 77);
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+}
+
+.textBig {
+  font-size:25px;
+  color: #B6116E;
+  font-weight: bold;
+}
+
+.textpink {
+  font-size: 15px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #B6116E;
+}
+
+.cardSunNoPartner {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888888;
+}
+
+.buttonAdd {
+  background-color: #7EBC43;
+  border: 1px solid #7EBC43;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  padding: 10px 90px;
+}
+
+.buttonAdd:hover {
+  background-color: #13aa52;
+  transition: 1s;
+}

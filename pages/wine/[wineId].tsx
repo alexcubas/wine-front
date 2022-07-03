@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ApplicationContext from "../../context/applicationContext";
 import Image from 'next/image'
+import styles from '../../styles/DescriptWine.module.css'
 
 export const getStaticPaths = async() => {
   const res = await fetch('https://wine-back-test.herokuapp.com/products')
@@ -62,37 +63,44 @@ const {setCounterCart} = useContext(ApplicationContext);
   return(
     <>
       {
-      <div>
-        <div><Image width="350" height="350" src={wine.wine.image} alt={wine.wine.name}/></div>
-        <div>
+      <div className={styles.descFather}>
+        <div className={styles.descImage}>
+          <Image width="1250" height="1250" src={wine.wine.image} alt={wine.wine.name}/>
+        </div>
+        <div className={styles.descSun}>
           <div>
-          <h4>Vinhos {'>'} {wine.wine.country} {'>'} {wine.wine.region}</h4>
-          <h1>{wine.name}</h1>
+            <h4  className={styles.descFather}><p className={styles.pinkText}>Vinhos {'>'} {wine.wine.country}</p> <p className={styles.whereText}>{'>'} {wine.wine.region}</p> </h4>
+            <h1 className={styles.boldText}>{wine.wine.name}</h1>
+          <div/>
+          <div className={styles.descAbout}>
+            <Image width="25" height="25" src={wine.wine.flag} alt={wine.wine.name}/>
+            <p className={styles.descAboutDetails}>{wine.wine.country}</p>
+            <p className={styles.descAboutDetails}>{wine.wine.type}</p>
+            <p className={styles.descAboutDetails}>{wine.wine.classification}</p>
+            <p className={styles.descAboutDetails}>{wine.wine.volume}</p>
+            <p className={styles.descAboutDetails}>{wine.wine.rating}</p>
+            <p className={styles.descAboutDetails}>{"("}{wine.wine.avaliations}{")"}</p>
+          </div>
+          </div>
+          <div className={styles.descPrice}>
+            <h3 className={styles.descSunPrice}>R$ <h1 className={styles.descPriceText}>{wine.wine.priceMember}</h1></h3>
+            <h5 className={styles.noPartnerText}>NÃO SÓCIO R${wine.wine.priceNonMember}/UN.</h5>
+          </div>
+            <h4 className={styles.boldText}>Comentário do Sommelier</h4>
+            <p>{wine.wine.sommelierComment}</p>
           <div>
-            <Image width="50" height="50" src={wine.wine.flag} alt={wine.wine.name}/>
-            <p>{wine.wine.country}</p>
-            <p>{wine.wine.type}</p>
-            <p>{wine.wine.classification}</p>
-            <p>{wine.wine.volume}</p>
-            <p>{wine.wine.rating}</p>
-            <p>{"("}{wine.wine.avaliations}{")"}</p>
+            <button
+              onClick={() => AddToCart(wine.wine.id)}
+            >+</button> 
+            <button
+              onClick={() => RemoveToCart(wine.wine.id)}
+            >-</button> 
+          </div>
+          <div>
+            <button type='button' onClick={() => AddToCart(wine.wine.id)}>Adicionar</button>
           </div>
         </div>
-        <div>
-          <h1>R${wine.wine.priceMember}</h1>
-          <h3>NÃO SÓCIO R${wine.wine.priceNonMember}/UN.</h3>
-        </div>
-          <h4>Comentário do Sommelier</h4>
-          <p>{wine.wine.sommelierComment}</p>
-        </div>
-        <button
-          onClick={() => AddToCart(wine.wine.id)}
-        >+</button> 
-        <button
-          onClick={() => RemoveToCart(wine.wine.id)}
-        >-</button> 
-        <div><button type='button' onClick={() => AddToCart(wine.wine.id)}>Adicionar</button></div>
-        </div>
+      </div>
     }
     </>
   )

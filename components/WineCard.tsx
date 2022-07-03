@@ -1,17 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import ApplicationContext from '../context/applicationContext';
+import styles from '../styles/CardWine.module.css'
 
 export default function WineCard({ wines }) {
-  const [quantity, setQuantity] = useState(0);
   const {setWineById, winesG, setCounterCart} = useContext(ApplicationContext);
-
-  const discount = (price, discount) => {
-    const disc = `0.${discount}`
-    const res = Number(disc) * price
-    return res.toFixed(2)
-  }
 
   const findById = (id) => {
     const correctId = wines?.items?.filter((wine) => wine.id === id )
@@ -32,35 +26,37 @@ export default function WineCard({ wines }) {
     {
       wines?.items?.map((wine) => (
         <div key={wine.id}>
-          <Link href={`/wine/${wine.id}`}>
-            <a onClick={() => findById(wine.id)}>
-            <div>
-          <div>
-            <Image width="150" height="150" src={wine.image} alt={wine.name} />
+          <div className={styles.cardFather} style={{width: "16rem", height: "25rem"}}>
+            <Link href={`/wine/${wine.id}`}>
+              <a onClick={() => findById(wine.id)}>
+                <div className={styles.cardImage}>
+                  <Image className="card-img-top" width="150" height="150" src={wine.image} alt={wine.name} />
+                </div>
+                <div className="card-body">
+                    <h6>
+                      {wine.name}
+                    </h6>
+                  <div className={styles.cardSun}>
+                    <p className={styles.textrisc}>
+                      R$ {wine.price}
+                    </p>
+                    <p className={styles.textColor}>
+                      {wine.discount}% OFF
+                    </p>
+                  </div>
+                <p className={styles.cardSun}>
+                  SÓCIO WINE <span className={styles.textpink}>R$<span className={styles.textBig}>{wine.priceMember}</span></span>
+                </p>
+                <p className={styles.cardSunNoPartner}>
+                  NÃO SÓCIO R${wine.priceNonMember}
+                </p>
+                </div>
+              </a>
+            </Link>
           </div>
-          <h2>
-            {wine.name}
-          </h2>
-          <div>
-            <p>
-            {wine.price}
-            </p>
-            <p>
-            {wine.discount}% OFF
-            </p>
-          </div>
-          <h3>
-            SÓCIO WINE R${discount(wine.price, wine.discount)}
-          </h3>
-          <h4>
-            NÃO SÓCIO R${wine.price}
-          </h4>
-            </div>
-            </a>
-          </Link>
-          <button type='button' onClick={() => AddToCart(wine.id)}>
-            ADICIONAR
-          </button>
+            <button className={styles.buttonAdd} type='button' onClick={() => AddToCart(wine.id)}>
+              ADICIONAR
+            </button>
         </div>
       ))
     }

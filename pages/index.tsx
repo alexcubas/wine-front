@@ -21,21 +21,19 @@ export default function Home() {
   }, [actualPage, filter])
   return (
     <>
-      <PriceLimit/>
-      <p>{wines && wines.totalItems} produtos encontrados </p>
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: 'repeat(3, 1fr)'
-      }}>
-      <WineCard wines={ wines }/>
+      <div className={styles.cardGlobal}>
+        <PriceLimit/>
+        <div className={styles.cardFather}>
+        <WineCard wines={ wines }/>
+        </div>
       </div>
-        {
-          Array(wines?.totalPages).fill('').map((_, index) => {
-            return <button key={index} onClick={() => setActualPage(index + 1)}>
-              { index + 1 }
-            </button>
-          })
-        }
+          {
+            Array(wines?.totalPages).fill('').map((_, index) => {
+              return <button key={index} onClick={() => setActualPage(index + 1)}>
+                { index + 1 }
+              </button>
+            })
+          }
     </>
   )
 }

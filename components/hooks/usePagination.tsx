@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useRouter } from 'next/router'
 import qs from 'query-string'
+import ApplicationContext from '../../context/applicationContext';
 
 export default function usePagination () {
   const router = useRouter()
