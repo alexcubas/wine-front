@@ -56,3 +56,37 @@
 .descPriceText {
   font-weight: bold;
 }
+
+.buttonAdd {
+  background-color: #7EBC43;
+  border: 1px solid #7EBC43;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  padding: 10px 90px;
+}
+
+.buttonAdd:hover {
+  background-color: #13aa52;
+  transition: 1s;
+}
+
+.buttonAddLess {
+  background-color: #7EBC43;
+  border: 1px solid #7EBC43;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.buttonAddLess:hover {
+  background-color: #13aa52;
+  transition: 1s;
+}

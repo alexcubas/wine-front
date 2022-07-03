@@ -24,11 +24,11 @@ interface IProduct {
 
 export default function useWines (pageLimit: number) {
   const [wines, setWines] = useState<IProduct>()
-  const {filter, setWinesG} = useContext(ApplicationContext);
+  const {filter, setWinesG, byName} = useContext(ApplicationContext);
   
   async function fetchWines (page: number) {
     const res = await fetch(
-      `https://wine-back-test.herokuapp.com/products?page=${page}&limit=${pageLimit}&filter=${filter}`
+      `https://wine-back-test.herokuapp.com/products?page=${page}&limit=${pageLimit}&filter=${filter}&name=${byName}`
     )
     const respJson = await res.json()
     setWines(respJson)

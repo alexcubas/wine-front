@@ -3,9 +3,39 @@
   justify-content: center;
 }
 
+.buttonChangePageFather {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .cardFather {
   display: flex;
   flex-wrap: wrap;
   margin-left: 15vw;
   margin-right: 8vw;
+}
+
+.buttonChangePage {
+  background-color: white;
+  border: 1px solid #B6116E;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #B6116E;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.buttonChangePage:hover {
+  background-color: #B6116E;
+  color: white;
+  transition: 1s;
+}
+
+.prodFounded {
+  margin-top: 15px;
+  margin-left: 50vw;
 }

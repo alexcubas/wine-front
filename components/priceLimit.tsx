@@ -1,12 +1,24 @@
 import { useContext,  } from "react"
-import ApplicationContext from "../context/applicationContext";
-import styles from '../styles/Price.module.css'
+import ApplicationContext from "../context/applicationContext"
+import styles from './../styles/Price.module.css'
 
 export default function PriceLimit() {
-  const {setFilter} = useContext(ApplicationContext);
+  const {setFilter, setByName} = useContext(ApplicationContext);
 
   return(
     <div className={styles.fatherForm}>
+      <h2>Refine sua busca</h2>
+      <form>
+        <h5>Pelo Nome:</h5>
+        <input
+          type="text" 
+          name='byName'
+          onChange={({ target }) => {
+          setByName(target.value)
+        }}>
+        </input>
+      </form>
+      <h5>Por preço:</h5>
       <form className={styles.form}>
           <input type="radio" id="Todos" name="price" value="0-1000" onClick={e => setFilter(e.currentTarget.value)} />
           <label htmlFor="Todos" >Todos</label><br/>

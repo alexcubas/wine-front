@@ -8,13 +8,17 @@ import styles from '../styles/Navbar.module.css'
 export default function Navbar() {
   const {counterCart} = useContext(ApplicationContext);
 
+  function mostrarPesquisa(){
+    document.getElementById('pesquisa').style.display="inline-block";
+   }
+
   useEffect(() => {
     counterCart
   }, [counterCart])
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Image src="/images/blacka.png" width="120" height="40" alt="Logo Wine" />
+        <Image src="/images/blacka.png" width="120" height="40" alt="Logo Wine"/>
       </div>
       <ul className={styles.link_items}>
         <li>
@@ -33,7 +37,7 @@ export default function Navbar() {
           Eventos
         </li>
       </ul>
-      <div className={styles.logo}>
+      <div className={styles.logoSearch}>
         <Image src="/images/Busca.png" width="50" height="50" alt="logo busca" />
       </div>
       <div className={styles.logo}>

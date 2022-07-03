@@ -88,16 +88,18 @@ const {setCounterCart} = useContext(ApplicationContext);
           </div>
             <h4 className={styles.boldText}>Comentário do Sommelier</h4>
             <p>{wine.wine.sommelierComment}</p>
-          <div>
-            <button
-              onClick={() => AddToCart(wine.wine.id)}
-            >+</button> 
-            <button
+          <div className={styles.descFather}>
+          <button
+               className={styles.buttonAddLess}
               onClick={() => RemoveToCart(wine.wine.id)}
             >-</button> 
-          </div>
+            <button
+               className={styles.buttonAddLess}
+              onClick={() => AddToCart(wine.wine.id)}
+            >+</button> 
           <div>
-            <button type='button' onClick={() => AddToCart(wine.wine.id)}>Adicionar</button>
+            <button className={styles.buttonAdd} type='button' onClick={() => AddToCart(wine.wine.id)}>Adicionar</button>
+          </div>
           </div>
         </div>
       </div>
