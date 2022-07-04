@@ -37,7 +37,8 @@ const {counterCart, setCounterCart, inCart, setInCart} = useContext(ApplicationC
 
   useEffect(() => {
     const cartCounter = JSON.parse(localStorage.getItem('prods'))
-    const res = cartCounter?.filter((prod) => prod.id === wine.wine.id)
+    let res;
+    if(cartCounter) {res = cartCounter?.filter((prod) => prod.id === wine.wine.id)}
     cartCounter ? setInCart(res.length) : null
   }, [counterCart])
 
