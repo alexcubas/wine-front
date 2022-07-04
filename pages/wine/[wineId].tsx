@@ -90,7 +90,7 @@ const {counterCart, setCounterCart, inCart, setInCart} = useContext(ApplicationC
           </div>
           </div>
           <div className={styles.descPrice}>
-            <h3 className={styles.descSunPrice}>R$ <h1 className={styles.descPriceText}>{wine.wine.priceMember}</h1></h3>
+            <h3 className={styles.descSunPrice}>R$ <p className={styles.descPriceText}>{wine.wine.priceMember}</p></h3>
             <h5 className={styles.noPartnerText}>NÃO SÓCIO R${wine.wine.priceNonMember}/UN.</h5>
           </div>
             <h4 className={styles.boldText}>Comentário do Sommelier</h4>
