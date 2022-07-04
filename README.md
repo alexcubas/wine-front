@@ -49,6 +49,8 @@ Suba a API
   npm start
 ```
 
+Após isso irá aparecer no terminal um link para a aplicação na web
+
 ## Desafios e superações
 
   Por ser minha primeira experiencia com NextJs tive alguns desafios logo de inicio como entender os novos funcionamentos dele, mas após um tempo entendi e achei muito interessante, com várias funcionalidades extremamente uteis.
