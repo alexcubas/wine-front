@@ -6,7 +6,7 @@ Desafio técnico para implementar o e-commerce de vendas de vinho com as seguint
 - Busca por nome do produto;
 - Adicionar e remover produtos do carrinho;
 
-A aplicação pode ser acessada por [aqui](https://wine-front-4arkn14l4-alexcubas.vercel.app/)
+A aplicação pode ser acessada por [aqui](https://wine-front-6f3idrnmi-alexcubas.vercel.app)
 
 ## Stacks utilizadas
 
