@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ApplicationContext from '../applicationContext';
 
 function ApplicationProvider({ children }) {
+  const [inCart, setInCart] = useState(0)
   const [byName, setByName] = useState('');
   const [filter, setFilter] = useState('0-500');
   const [wineById, setWineById] = useState({});
@@ -19,7 +20,9 @@ function ApplicationProvider({ children }) {
     counterCart,
     setCounterCart,
     byName,
-    setByName
+    setByName,
+    inCart,
+    setInCart
   };
 
   return (

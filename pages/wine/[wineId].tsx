@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ApplicationContext from "../../context/applicationContext";
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,7 +33,13 @@ export const getStaticProps = async (context) => {
 }
 
 export default function Wine(wine) {
-const {setCounterCart} = useContext(ApplicationContext);
+const {counterCart, setCounterCart, inCart, setInCart} = useContext(ApplicationContext);
+
+  useEffect(() => {
+    const cartCounter = JSON.parse(localStorage.getItem('prods'))
+    const res = cartCounter.filter((prod) => prod.id === wine.wine.id)
+    setInCart(res.length)
+  }, [counterCart])
 
   function AddToCart(id) {
     const cartCounter = JSON.parse(localStorage.getItem('prods'))
@@ -58,7 +64,6 @@ const {setCounterCart} = useContext(ApplicationContext);
       if(unLikeId.length !== cartCounter.length) setCounterCart(cartCounter ? cartCounter.length - 1 : 0)
       
       localStorage.setItem('prods', JSON.stringify(newArray))
-      
     }
   }
   return(
@@ -95,6 +100,9 @@ const {setCounterCart} = useContext(ApplicationContext);
                className={styles.buttonAddLess}
               onClick={() => RemoveToCart(wine.wine.id)}
             >-</button> 
+          <button
+               className={styles.buttonAddLess}
+            >{inCart}</button> 
             <button
                className={styles.buttonAddLess}
               onClick={() => AddToCart(wine.wine.id)}

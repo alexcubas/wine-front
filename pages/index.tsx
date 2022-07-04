@@ -14,7 +14,6 @@ export default function Home() {
   useEffect(() => {
     const cartCounter = JSON.parse(localStorage.getItem('prods'))
     setCounterCart(cartCounter ? cartCounter.length : 0)
-
     fetchWines(actualPage)
   }, [actualPage, filter, byName])
   return (
