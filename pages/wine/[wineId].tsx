@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ApplicationContext from "../../context/applicationContext";
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../../styles/DescriptWine.module.css'
 
 export const getStaticPaths = async() => {
@@ -62,6 +63,7 @@ const {setCounterCart} = useContext(ApplicationContext);
   }
   return(
     <>
+      <Link href={`/`}><a className={styles.textVoltar}>{"<"}voltar</a></Link>
       {
       <div className={styles.descFather}>
         <div className={styles.descImage}>
