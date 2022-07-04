@@ -68,8 +68,8 @@ const {setCounterCart} = useContext(ApplicationContext);
           <Image width="1250" height="1250" src={wine.wine.image} alt={wine.wine.name}/>
         </div>
         <div className={styles.descSun}>
-          <div>
-            <h4  className={styles.descFather}><p className={styles.pinkText}>Vinhos {'>'} {wine.wine.country}</p> <p className={styles.whereText}>{'>'} {wine.wine.region}</p> </h4>
+          <div id={styles.maxW}>
+            <h4 className={styles.descFather}><p className={styles.pinkText}>Vinhos {'>'} {wine.wine.country}</p> <p className={styles.whereText}>{'>'} {wine.wine.region}</p> </h4>
             <h1 className={styles.boldText}>{wine.wine.name}</h1>
           <div/>
           <div className={styles.descAbout}>

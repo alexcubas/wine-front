@@ -78,3 +78,10 @@
   background-color: #13aa52;
   transition: 1s;
 }
+
+@media (max-width: 800px) {
+  #maxW {
+    width: "10rem";
+    height: "15rem";
+  }
+}

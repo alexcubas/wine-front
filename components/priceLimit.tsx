@@ -6,7 +6,7 @@ export default function PriceLimit() {
   const {setFilter, setByName} = useContext(ApplicationContext);
 
   return(
-    <div className={styles.fatherForm}>
+    <div id={styles.onlyMaxW} className={styles.fatherForm}>
       <h2>Refine sua busca</h2>
       <form>
         <h5>Pelo Nome:</h5>

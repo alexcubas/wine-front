@@ -26,7 +26,7 @@ export default function WineCard({ wines }) {
     {
       wines?.items?.map((wine) => (
         <div key={wine.id}>
-          <div className={styles.cardFather} style={{width: "16rem", height: "25rem"}}>
+          <div id={styles.maxW} className={styles.cardFather} style={{width: "16rem", height: "25rem"}}>
             <Link href={`/wine/${wine.id}`}>
               <a onClick={() => findById(wine.id)}>
                 <div className={styles.cardImage}>

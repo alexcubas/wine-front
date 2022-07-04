@@ -39,3 +39,9 @@
   margin-top: 15px;
   margin-left: 50vw;
 }
+
+@media (max-width: 800px) {
+  #maxW {
+    margin-left: 32%;
+  }
+}

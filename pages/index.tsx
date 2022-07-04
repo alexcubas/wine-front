@@ -19,7 +19,7 @@ export default function Home() {
   }, [actualPage, filter, byName])
   return (
     <>
-      <p className={styles.prodFounded}>{ wines?.totalItems } produtos encontrados</p>
+      <p id={styles.maxW} className={styles.prodFounded}>{ wines?.totalItems } produtos encontrados</p>
       <div className={styles.cardGlobal}>
         <PriceLimit/>
         <div className={styles.cardFather}>

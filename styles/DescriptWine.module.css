@@ -90,3 +90,25 @@
   background-color: #13aa52;
   transition: 1s;
 }
+
+@media (max-width: 800px) {
+  .descFather {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+/* 
+  .buttonAddLess {
+    display: none;
+  } */
+
+  .descAbout {
+    display: flex;
+    justify-content: center;
+  }
+
+  .descSun {
+    margin-left: 50px;
+  }
+
+}
