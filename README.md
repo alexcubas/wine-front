@@ -12,7 +12,6 @@ A aplicação pode ser acessada por [aqui](https://wine-front-olopetxjq-alexcuba
 
 - NextJs
 - TypeScript
-- PostgreSQL
 - Vercel
 
 ## Desafios e superações
