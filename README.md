@@ -15,6 +15,40 @@ A aplicação pode ser acessada por [aqui](https://wine-front-olopetxjq-alexcuba
 - Context
 - Vercel
 
+## Como Iniciar a aplicação
+
+caso queira iniciar a aplicação localmente
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:alexcubas/Futebol-Clube.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd wine-front
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Buildar a aplicação
+
+```bash
+  npm run build
+```
+
+Suba a API
+
+```bash
+  npm start
+```
+
 ## Desafios e superações
 
   Por ser minha primeira experiencia com NextJs tive alguns desafios logo de inicio como entender os novos funcionamentos dele, mas após um tempo entendi e achei muito interessante, com várias funcionalidades extremamente uteis.
